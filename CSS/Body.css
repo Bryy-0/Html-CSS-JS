@@ -1,0 +1,45 @@
+.Body{
+    margin:5%;
+    width: 50%;
+    text-align:left;
+}
+.Body-2{
+    text-align: center;
+    font-size: 23px;
+}
+.Body-3{
+    border:10px solid black;
+    width:380px;
+    padding:2%;
+}
+.Body-4{
+    border:10px solid black;
+    width:380px;
+    padding:2%;
+}
+.Body-Table-1{
+    margin-left: 5%;
+}
+.Body-Table-2{
+    margin-left: 80%;
+}
+.Phrase{
+    font-size:250%;
+}
+.Phrase-2{
+    color: rgb(0, 204, 255);
+}
+.About{
+    font-size:90%;
+}
+.About-2{
+    font-size:15px;
+    text-align: justify;
+}
+.Text{
+    font-size: 20px;
+}
+.Text-2{
+    text-align: justify;
+    font-size: 16px;
+}
