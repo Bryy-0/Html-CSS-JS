@@ -66,7 +66,9 @@
           <a href="#RequestAppointment" class="hover:text-blue-600 transition">Request Appointment</a>
         </div>
         <div>
-          <a href="#Help" class="text-gray-600 hover:text-blue-600 transition font-semibold">Help</a>
+          <button id="helpButton" class="text-gray-600 hover:text-blue-600 transition font-semibold focus:outline-none">
+            Help
+          </button>
         </div>
       </div>
     </div>
@@ -200,7 +202,7 @@
       </div>
     </div>
 
-    <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Our Commitment to Progress</h3>
+    <h3 class="text-xl font-semibold mb-4 text-center">Our Commitment to Progress</h3>
     <p class="text-gray-700 text-center max-w-3xl mx-auto leading-relaxed">
       We're continuously improving our technology through research and user feedback.
     </p>
@@ -257,20 +259,46 @@
     </form>
   </section>
 
-  <!-- Help Section -->
-  <section id="Help" class="max-w-5xl mx-auto px-4 py-12 bg-white shadow rounded-lg mb-12">
-    <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Help & How to Use This Website</h2>
-    <div class="max-w-3xl mx-auto space-y-4 text-gray-700 text-lg leading-relaxed">
-      <p>Welcome to Visionary! This website is designed to provide you with information about our revolutionary vision restoration technology and allow you to request an appointment for a blind patient.</p>
-      <ul class="list-disc list-inside space-y-2">
-        <li><strong>Navigation Bar:</strong> Use the links at the top to quickly jump to different sections such as Home, About Us, How it works, Benefits, Request Appointment, and Help.</li>
-        <li><strong>Benefits:</strong> Learn about the life-changing benefits our technology offers to individuals with visual impairments.</li>
-        <li><strong>Request Appointment:</strong> Fill out the form on the right side of the page to request an appointment for a blind patient. Please provide accurate contact information and preferred date.</li>
-        <li><strong>Contact Us:</strong> Find our contact details in the footer for any additional questions or support.</li>
-      </ul>
-      <p>If you need further assistance, please do not hesitate to reach out via the contact information provided.</p>
+  <!-- Help Modal -->
+  <div id="helpModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg shadow-lg max-w-3xl w-full p-6 relative">
+      <button id="closeHelpModal" class="absolute top-4 right-4 text-gray-600 hover:text-blue-600 focus:outline-none">
+        <i class="fas fa-times fa-lg"></i>
+      </button>
+      <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Help & How to Use This Website</h2>
+      <div class="space-y-4 text-gray-700 text-lg leading-relaxed">
+        <p>Welcome to Visionary! This website is designed to provide you with information about our revolutionary vision restoration technology and allow you to request an appointment for a blind patient.</p>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Navigation Bar:</strong> Use the links at the top to quickly jump to different sections such as Home, About Us, How it works, Benefits, Request Appointment, and Help.</li>
+          <li><strong>Benefits:</strong> Learn about the life-changing benefits our technology offers to individuals with visual impairments.</li>
+          <li><strong>Request Appointment:</strong> Fill out the form on the right side of the page to request an appointment for a blind patient. Please provide accurate contact information and preferred date.</li>
+          <li><strong>Contact Us:</strong> Find our contact details in the footer for any additional questions or support.</li>
+        </ul>
+        <p>If you need further assistance, please do not hesitate to reach out via the contact information provided.</p>
+      </div>
     </div>
-  </section>
+  </div>
+
+  <script>
+    const helpButton = document.getElementById('helpButton');
+    const helpModal = document.getElementById('helpModal');
+    const closeHelpModal = document.getElementById('closeHelpModal');
+
+    helpButton.addEventListener('click', () => {
+      helpModal.classList.remove('hidden');
+    });
+
+    closeHelpModal.addEventListener('click', () => {
+      helpModal.classList.add('hidden');
+    });
+
+    // Close modal when clicking outside the modal content
+    helpModal.addEventListener('click', (event) => {
+      if (event.target === helpModal) {
+        helpModal.classList.add('hidden');
+      }
+    });
+  </script>
 
   <!-- Footer -->
   <footer class="bg-gray-800 text-gray-300 py-8 mt-12">
