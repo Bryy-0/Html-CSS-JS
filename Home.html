@@ -1,182 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<body class="Page">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visionary.com</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <style>
+    :root {
+      --baby-blue: #89CFF0;
+      --royal-blue: #4169E1;
+      --white: #FFFFFF;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--white);
+      color: var(--royal-blue);
+    }
+    a, .text-blue-600 {
+      color: var(--royal-blue) !important;
+    }
+    a:hover, .hover\:text-blue-600:hover {
+      color: var(--baby-blue) !important;
+    }
+    .bg-blue-600 {
+      background-color: var(--royal-blue) !important;
+    }
+    .bg-blue-700:hover {
+      background-color: #365acb !important; /* slightly darker royal blue */
+    }
+    .hover\:bg-blue-700:hover {
+      background-color: #365acb !important;
+    }
+    .border-blue-600 {
+      border-color: var(--royal-blue) !important;
+    }
+    .hover\:bg-blue-100:hover {
+      background-color: var(--baby-blue) !important;
+    }
+    .text-white {
+      color: var(--white) !important;
+    }
+  </style>
+</head>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visionary.com</title>
-    <link rel="stylesheet" href="CSS/TopNav.css" />
-    <link rel="stylesheet" href="CSS/Header.css" />
-    <link rel="stylesheet" href="CSS/Body.css" />
-    <link rel="stylesheet" href="CSS/Body2.css" />
-  </head>
+<body class="bg-gray-50 text-gray-800">
 
-  <body>
-    <div class="topnav">
-      <a class="active" href="#Home">Home</a>
-      <a href="#About Us">About Us</a>
-      <a href="#How it works">How it works</a>
-      <a href="#Help" class="split">Help</a>
+  <!-- Navigation -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex space-x-8">
+          <a href="#Home" class="text-blue-600 font-semibold border-b-2 border-blue-600 pb-1">Home</a>
+          <a href="#AboutUs" class="hover:text-blue-600 transition">About Us</a>
+          <a href="#HowItWorks" class="hover:text-blue-600 transition">How it works</a>
+          <a href="#LifeChangingBenefits" class="hover:text-blue-600 transition">Benefits</a>
+          <a href="#RequestAppointment" class="hover:text-blue-600 transition">Request Appointment</a>
+        </div>
+        <div>
+          <a href="#Help" class="text-gray-600 hover:text-blue-600 transition font-semibold">Help</a>
+        </div>
+      </div>
     </div>
+  </nav>
 
-    <header class="Title">
-      <h1 class="Head">Visionary: A Chance to see a new world</h1>
-      <p class="Partner">
+  <!-- Header -->
+  <header class="bg-white shadow mt-6 py-10">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+        Visionary: A Chance to see a new world
+      </h1>
+      <p class="text-lg text-gray-600 mb-4">
         Partnered with
-        <br />
+      </p>
+      <p class="text-lg text-gray-600 mb-6 font-semibold">
         EO-Executive Optical
-        <br />
-        <img src="Pictures/EO Logo.jpg" width="50" height="50" />
       </p>
-    </header>
-
-    <div class="Body">
-      <h2 class="Phrase">
-        Restoring Vision, <span class="Phrase-2">Transforming Lives</span>
-        <br />
-        <span class="About">About us</span>
-      </h2>
-      <p class="About-2">
-        Revolutionary eyewear technology that helps blind individuals
-        <br />
-        experience the world in new ways. Designed to transform lives
-        <br />
-        through advanced vision restoration.
-      </p>
+      <img
+        src="Pictures/EO Logo.jpg"
+        alt="EO Executive Optical Logo"
+        class="mx-auto w-16 h-16 object-contain rounded"
+      />
     </div>
+  </header>
 
-    <div class="Body-2">
-      <h2>How our Technology Works</h2>
-      <p class="Text">
-        Our revolutionary eyewear uses cutting-edge technology to help restore
-        visual perception for
-        <br />
-        blind individuals through multiple advanced mechanisms.
-      </p>
+  <!-- About Us Section -->
+  <section id="AboutUs" class="max-w-5xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6">
+      Restoring Vision, <span class="text-blue-600">Transforming Lives</span>
+    </h2>
+    <p class="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
+      Revolutionary eyewear technology that helps blind individuals experience the world in new ways.
+      Designed to transform lives through advanced vision restoration.
+    </p>
+    <div class="mt-8 flex justify-center space-x-6">
+      <a href="#RequestAppointment" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-300 ease-in-out">
+        Request Appointment
+      </a>
+      <a href="#HowItWorks" class="px-6 py-3 border border-blue-600 text-blue-600 font-semibold rounded-md hover:bg-blue-100 transition duration-300 ease-in-out">
+        Learn How It Works
+      </a>
     </div>
+  </section>
 
-    <div class="Body-Table-1">
-      <div class="Body-3">
-        <h3>Image Capture & Processing</h3>
-        <p class="Text-2">
-          High-resolution cameras embedded in the frames capture real-time
-          visual information. Our advanced AI processes these images into
-          patterns that can be interpreted by the brain.
+  <!-- How Our Technology Works -->
+  <section id="HowItWorks" class="bg-white shadow max-w-5xl mx-auto px-6 py-12 rounded-lg mb-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">How our Technology Works</h2>
+    <p class="text-gray-700 text-lg max-w-4xl mx-auto mb-10 leading-relaxed text-center">
+      Our revolutionary eyewear uses cutting-edge technology to help restore visual perception for blind individuals through multiple advanced mechanisms.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+      <div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Image Capture & Processing</h3>
+        <p class="text-gray-700 leading-relaxed">
+          High-resolution cameras embedded in the frames capture real-time visual information. Our advanced AI processes these images into patterns that can be interpreted by the brain.
         </p>
       </div>
-      <p></p>
-      <div class="Body-3">
-        <h3>Neural Stimulation</h3>
-        <p class="Text-2">
-          Micro-electrodes in the frames send precise, non-invasive signals to
-          the optic nerve pathways. This bypasses damaged retinal cells and
-          delivers visual information directly to the brain.
+      <div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Neural Stimulation</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Micro-electrodes in the frames send precise, non-invasive signals to the optic nerve pathways. This bypasses damaged retinal cells and delivers visual information directly to the brain.
         </p>
       </div>
-      <p></p>
-    </div>
-    <p></p>
-    <div class="Body-Table-2">
-      <p></p>
-      <div class="Body-4">
-        <h3>Brain Adaptation</h3>
-        <p class="Text-2">
-          Our technology works with the brain's natural neuroplasticity. Through
-          regular use, the brain learns to interpret these signals, gradually
-          improving visual perception over time.
+      <div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Brain Adaptation</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Our technology works with the brain's natural neuroplasticity. Through regular use, the brain learns to interpret these signals, gradually improving visual perception over time.
         </p>
       </div>
-      <p></p>
-      <div class="Body-4">
-        <h3>Personalized Calibration</h3>
-        <p>
-Each device is custom-calibrated to the individual's specific condition and visual system. Our specialists work with each patient to optimize the device for their unique needs.
+      <div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Personalized Calibration</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Each device is custom-calibrated to the individual's specific condition and visual system. Our specialists work with each patient to optimize the device for their unique needs.
         </p>
       </div>
     </div>
+  </section>
 
-    <div class="Body-2">
-      <h2>Life-Changing Benefits</h2>
-      <p>
-        Our vision restoration technology offers numerous benefits that
-        significantly improve the lives
-        <br />
-        of individuals with visual impairments.
-      </p>
-    </div>
+  <!-- Life-Changing Benefits -->
+  <section id="LifeChangingBenefits" class="max-w-5xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Life-Changing Benefits</h2>
+    <p class="text-gray-700 text-lg max-w-3xl mx-auto mb-10 leading-relaxed text-center">
+      Our vision restoration technology offers numerous benefits that significantly improve the lives of individuals with visual impairments.
+    </p>
 
-    <div class="Body-Table-1">
-      <div class="Body-3">
-        <h3>Environmental Navigation</h3>
-        <p class="Text-2">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Environmental Navigation</h3>
+        <p class="text-gray-700 leading-relaxed">
           Improved ability to navigate surroundings and identify obstacles, enhancing independence and mobility.
         </p>
       </div>
-      <p></p>
-      <div class="Body-3">
-        <h3>Facial Recognition</h3>
-        <p class="Text-2">
-          Enhanced ability to recognize faces and expressions, facilitating social connections and interactions.	
-        </p>
-      </div>
-      <p></p>
-      <div class="Body-3">
-        <h3>Color Perception</h3>
-        <p class="Text-2">
-          Gradual development of color perception, bringing new dimensions to the visual experience.	
-        </p>
-      </div>
-    </div>
-
-    <div class="Body-2">
-      <h2>Additional Life-Changing Benefits</h2>
-
-      <div class="Body-Table-2">
-        <div class="Body-3">
-          <h3>Reading Assistance</h3>
-          <p class="Text-2">
-            Technology that enables reading text with increasing clarity, opening access to written information.	          </p>
-        </div>
-        <p></p>
-        <div class="Body-3">
-          <h3>Daily Independence</h3>
-          <p class="Text-2">
-            Increased ability to perform daily tasks without assistance, fostering greater self-reliance.	          </p>
-        </div>
-        <p></p>
-        <div class="Body-3">
-          <h3>Quality of Life</h3>
-          <p class="Text-2">
-            Significant improvement in overall quality of life, self-confidence, and emotional well-being.	          </p>
-        </div>
-      </div>
-
-      <h3>Our Commitment to Progress</h3>
-      <p>
-        We're continuously improving our technology through research and user feedback.
-      </p>
-
-    <div class="Body-2">
-      <h2>The journey to Restored Vision</h2>
-      <p>
-        Our comprehensive process ensures the best possible outcome for each
-        individual. Here's what
-        <br />to expect when you choose VisionRestore.
-      </p>
-    </div>
-
-    <footer>
       <div>
-        <h3>Contact Us</h3>
-        <p>Email: <a href="mailto:bcsmatias@gmail.com">bcsmatias@gmail.com</a></p>
-        <p>Phone: <a href="tel:+63 968 353 5892">+63 968 353 5892</a></p>
-        <p>Address: 123 Main St, Anytown, USA</p>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Facial Recognition</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Enhanced ability to recognize faces and expressions, facilitating social connections and interactions.
+        </p>
       </div>
-      <p>&copy; 2025 Visionary. All rights reserved.</p>
-    </footer>
-  </body>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Color Perception</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Gradual development of color perception, bringing new dimensions to the visual experience.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Life-Changing Benefits -->
+  <section class="bg-white shadow max-w-5xl mx-auto px-6 py-12 rounded-lg mb-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Additional Life-Changing Benefits</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">
+      <div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Reading Assistance</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Technology that enables reading text with increasing clarity, opening access to written information.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Daily Independence</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Increased ability to perform daily tasks without assistance, fostering greater self-reliance.
+        </p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Quality of Life</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Significant improvement in overall quality of life, self-confidence, and emotional well-being.
+        </p>
+      </div>
+    </div>
+
+    <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Our Commitment to Progress</h3>
+    <p class="text-gray-700 text-center max-w-3xl mx-auto leading-relaxed">
+      We're continuously improving our technology through research and user feedback.
+    </p>
+  </section>
+
+  <!-- Journey to Restored Vision -->
+  <section class="max-w-5xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">The journey to Restored Vision</h2>
+    <p class="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed text-center">
+      Our comprehensive process ensures the best possible outcome for each individual. Here's what to expect when you choose VisionRestore.
+    </p>
+  </section>
+
+  <!-- Request Appointment Form next to footer -->
+  <section id="RequestAppointment" class="max-w-5xl mx-auto px-4 py-12 bg-white shadow rounded-lg mb-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Request an Appointment</h2>
+    <form class="max-w-3xl mx-auto space-y-6" action="#" method="POST" novalidate>
+      <div>
+        <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+        <input type="text" id="name" name="name" required
+          class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+      <div>
+        <label for="relationship" class="block text-gray-700 font-semibold mb-2">Relationship to Patient</label>
+        <input type="text" id="relationship" name="relationship" required
+          class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+      <div>
+        <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+        <input type="email" id="email" name="email" required
+          class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+      <div>
+        <label for="phone" class="block text-gray-700 font-semibold mb-2">Phone</label>
+        <input type="tel" id="phone" name="phone" required
+          class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+      <div>
+        <label for="date" class="block text-gray-700 font-semibold mb-2">Preferred Date</label>
+        <input type="date" id="date" name="date" required
+          class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      </div>
+      <div>
+        <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+        <textarea id="message" name="message" rows="4"
+          class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit"
+          class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 transition">
+          Submit Request
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Help Section -->
+  <section id="Help" class="max-w-5xl mx-auto px-4 py-12 bg-white shadow rounded-lg mb-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Help & How to Use This Website</h2>
+    <div class="max-w-3xl mx-auto space-y-4 text-gray-700 text-lg leading-relaxed">
+      <p>Welcome to Visionary! This website is designed to provide you with information about our revolutionary vision restoration technology and allow you to request an appointment for a blind patient.</p>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Navigation Bar:</strong> Use the links at the top to quickly jump to different sections such as Home, About Us, How it works, Benefits, Request Appointment, and Help.</li>
+        <li><strong>Benefits:</strong> Learn about the life-changing benefits our technology offers to individuals with visual impairments.</li>
+        <li><strong>Request Appointment:</strong> Fill out the form on the right side of the page to request an appointment for a blind patient. Please provide accurate contact information and preferred date.</li>
+        <li><strong>Contact Us:</strong> Find our contact details in the footer for any additional questions or support.</li>
+      </ul>
+      <p>If you need further assistance, please do not hesitate to reach out via the contact information provided.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-8 mt-12">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+      <p>Email: <a href="mailto:bcsmatias@gmail.com" class="text-blue-400 hover:underline">bcsmatias@gmail.com</a></p>
+      <p>Phone: <a href="tel:+639683535892" class="text-blue-400 hover:underline">+63 968 353 5892</a></p>
+      <p>Address: 123 Main St, Anytown, USA</p>
+      <p class="mt-6 text-sm">&copy; 2025 Visionary. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
 
 </html>
